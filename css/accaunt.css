@@ -1,0 +1,154 @@
+#header {
+    padding-bottom:7px;
+}
+#main-content section {
+    border-top: 1px solid #ccc;
+    padding: 15px 0;
+}
+
+.card_avatar {
+
+}
+    .card_avatar div:first-child {
+        width: 120px;
+        text-align: center;
+        position: relative;
+        margin: 0 auto;
+    }
+        .card_avatar div:first-child picture {
+            position:relative;
+        }
+        .card_avatar div:first-child .badge-online:before {
+            position:absolute;
+            content:"Online";
+            color:green;
+            top:0;
+            right:0;
+            z-index:1;
+        }
+    .card_avatar div:first-child img {
+        border-radius: 50%;
+    }
+    .card_avatar font-face-name {
+        font-weight:bold;
+
+    }
+    .card_avatar .desc-card_avatar {
+        padding-left: 30px;
+        padding-top: 15px;
+    }
+        .card_avatar .desc-card_avatar .status-card_avatar {
+            color: #8d8b8b;
+        }
+            .card_avatar .desc-card_avatar .status-card_avatar .free {
+                color: green;
+                font-style: italic;
+            }
+            .card_avatar .desc-card_avatar .status-card_avatar .busy {
+                font-style: italic;
+                color: red;
+            }
+/* Список inline (в строку) */
+ul.list_inline {
+    color: #bbb;
+    list-style: none;
+    padding: 0;
+}
+
+    ul.list_inline li {
+        display: inline-block;
+        position: relative;
+        padding-left: 1rem;
+    }
+
+        ul.list_inline li:first-child:before {
+            content: '';
+        }
+
+        ul.list_inline li:before {
+            position: absolute;
+            content: "\2022";
+            font-size: 1.5rem;
+            margin: -5px 5px;
+            left: 0;
+        }
+
+
+.specializations ul.list_inline, .contacts a {
+    color: green;
+}
+.contacts a:hover {text-decoration:underline;}
+.contacts ul {list-style: none;}
+    .contacts ul li {
+        display: inline-block;
+        margin-right:7px;
+    }
+    .contacts ul li:last-child { margin-right:0;}
+
+/* Фотографии работ */
+.work figure {
+    width: 154px;
+    height: 154px;
+    overflow: hidden;
+    text-align: center;
+    border: 2px solid rgb(204, 204, 204);
+    box-shadow: rgb(139, 139, 139) 1px 1px 3px 2px;
+    -moz-box-shadow: rgb(139, 139, 139) 1px 1px 3px 2px;
+    -webkit-box-shadow: rgb(139, 139, 139) 1px 1px 3px 2px;
+    border-radius:5px;
+}
+    .work figure {
+        position:relative;
+        cursor:pointer;
+    }
+
+    .work figure .caption {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        transition: all 0.7s;
+        opacity: 0;
+    }
+
+    .work figure .caption:hover {
+        opacity: 1;
+        visibility: visible;
+    }
+        .work figure .caption i {
+            color: whitesmoke;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            top: 45%;
+            font-size:1.7rem;
+        }
+
+/* Вкладка информация */
+.table {
+    display: grid;
+    grid-column-gap: 7px;
+    grid-row-gap: 7px;
+    grid-template-columns: 200px 300px;
+}
+    .table .th {
+        font-weight:bold;
+    }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .table {
+        grid-template-columns: 125px 1fr;
+    }
+}
+
+/* Вкладка с отызвами */
+#reviews img {
+    width: 100px;
+    border-radius:50%;
+}

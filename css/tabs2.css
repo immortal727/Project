@@ -1,0 +1,255 @@
+/* Вкладки с применением jquery*/
+/* базовый контейнер вкладок(табов) */
+
+.tabs-box {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+
+/* панель вкладок */
+
+ul.tabs {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    height: 42px;
+    border-bottom: 1px solid #00655c;
+    width: 100%;
+}
+
+    ul.tabs li {
+        float: left;
+        margin: 0;
+        cursor: pointer;
+        padding: 0 21px;
+        height: 42px;
+        line-height: 42px;
+        border-top: 1px solid #00655c;
+        border-left: 1px solid #00655c;
+        border-right: 1px solid #00b7a6;
+        background-color: #009688;
+        color: #ddd;
+        overflow: hidden;
+        position: relative;
+        font-size: 16px
+    }
+
+
+/* указываем стиль правой рамки у последней вкладки */
+
+.tab_last {
+    border-right: 1px solid #00655c;
+}
+
+
+/* стили вкладок при наведении */
+
+ul.tabs li:hover {
+    background-color: #26A69A;
+    color: #fefefe;
+}
+
+
+/* стили активных вкладок */
+
+ul.tabs li.active {
+    background-color: #fff;
+    color: #333;
+    border-top: 2px solid green;
+    display: block;
+    font-weight:bold;
+}
+
+/* контейнер вкладок первого уровня, включающий в себя панели заголовков аккордеона */
+.tab_container {
+    border: 1px solid #00655c;
+    border-top: none;
+    clear: both;
+    float: left;
+    width: 100%;
+    background: #fff;
+    overflow: auto;
+}
+
+
+/* блоки с содержанием по-умолчанию скрыты 
+ * указать раскрытым при загрузке нужный блок
+ * с помощью style="display: block;" в html
+*/
+
+.tab_content {
+    padding: 20px;
+    display: none;
+}
+
+
+    /* параграф внутри блоков с содержанием */
+
+    .tab_content p {
+        margin-bottom: 10px
+    }
+
+
+    /**
+ * Изображения внутри вкладок
+ * ...сделаем их отзывчивыми
+ */
+
+    .tab_content img {
+        width: 100%;
+        height: auto;
+        -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+
+        /* полноразмерная картинка */
+
+        .tab_content img .large-img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+
+        /* миниатюра слева */
+
+        .tab_content img.img-left {
+            width: 25%;
+            float: left;
+            margin: 5px 15px 15px 0;
+        }
+
+
+        /* миниатюра справа */
+
+        .tab_content img.img-right {
+            width: 25%;
+            float: right;
+            margin: 5px 0 15px 15px;
+        }
+
+/* аккордеон скрыт в режиме вкладок */
+
+.tab_accordion {
+    display: none;
+}
+
+
+/* Переход вкладок в режим аккордеона 
+ * при достижении размера окна просмотра 480px 
+*/
+
+@media screen and (max-width: 480px) {
+    /* скрываем вкладки */
+    .tabs {
+        display: none;
+    }
+    /* показываем элементы аккордеона */
+    .tab_accordion {
+        position: relative;
+        background-color: #26A69A;
+        font-weight: 400;
+        font-size: 16px;
+        color: #ddd;
+        border-top: 1px solid #ccc;
+        margin: 0;
+        padding: 14px 20px;
+        display: block;
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+        /* панели аккордеона при наведении */
+        .tab_accordion:hover {
+            background-color: #009688;
+        }
+        /* переключатель вкладок, положение вниз */
+        .tab_accordion:before {
+            content: '';
+            height: 8px;
+            width: 8px;
+            display: block;
+            border: 2px solid #fefefe;
+            border-right-width: 0;
+            border-top-width: 0;
+            -ms-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            position: absolute;
+            right: 20px;
+            top: 18px
+        }
+    /* состояние активных панелей */
+    .d_active {
+        background-color: #008477;
+        color: #fff;
+    }
+        /* активный переключатель, положение вверх */
+        .d_active.tab_accordion:before {
+            border: 2px solid #fefefe;
+            border-left-width: 0;
+            border-bottom-width: 0;
+            top: 18px
+        }
+}
+
+@media screen and (max-width: 480px) {
+    /* скрываем вкладки */
+    .tabs {
+        display: none;
+    }
+    /* показываем элементы аккордеона */
+    .tab_accordion {
+        position: relative;
+        background-color: #26A69A;
+        font-weight: 400;
+        font-size: 16px;
+        color: #ddd;
+        border-top: 1px solid #ccc;
+        margin: 0;
+        padding: 14px 20px;
+        display: block;
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+        /* панели аккордеона при наведении */
+        .tab_accordion:hover {
+            background-color: #009688;
+        }
+        /* переключатель вкладок, положение вниз */
+        .tab_accordion:before {
+            content: '';
+            -ms-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            position: absolute;
+            right: 20px;
+        }
+    /* состояние активных панелей */
+    .d_active {
+        background-color: #008477;
+        color: #fff;
+    }
+        /* активный переключатель, положение вверх */
+        .d_active.tab_accordion:before {
+            border: 2px solid #fefefe;
+            border-left-width: 0;
+            border-bottom-width: 0;
+            top: 18px
+        }
+}

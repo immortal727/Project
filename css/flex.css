@@ -1,0 +1,58 @@
+.flex-container {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.flex-around{
+    justify-content: space-around;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-center {
+    justify-content:center;
+    align-items:center;
+}
+.flex-start {
+    justify-content: flex-start;
+}
+.flex-left {
+    justify-content: left;
+}
+.flex-1 {
+    flex: 1;
+}
+.flex-2 {
+    flex: 16.66%;
+}
+.flex-3 {
+    flex: 25%;
+}
+.flex-4 {
+    flex: 33.33%;
+}
+.flex-5 {
+    flex:41.66%;
+}
+.flex-6 {
+    flex: 50%;
+}
+.flex-7 {
+    flex: 58.33%;
+}
+.flex-8 {
+    flex: 66.66%;
+}
+.flex-9 {
+    flex: 75%;
+}
+.flex-10 {
+    flex:83.33%;
+}
+.flex-11 {
+    flex:91.66%;
+}
+.flex-12 {
+    flex:100%
+}

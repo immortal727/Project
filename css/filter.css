@@ -1,0 +1,105 @@
+.all_tasks{text-align:center; color:green;}
+.filter_specs {
+    display: grid;
+    grid-column-gap: 5px;
+    grid-row-gap: 25px;
+    grid-template-columns: repeat(auto-fit, 280px);
+    justify-content: center;
+}
+    .filter_specs label {
+        position: relative;
+        padding: 15px 20px 15px 70px;
+    }
+    .filter_specs .ico {
+        width: 30px;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+    }
+    .filter_specs .check_input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+    .filter_specs .check_box {
+        position:absolute;
+        border-color: #82b93c;
+        background: url('../img/filter/check_bg.png') 50% no-repeat #82b93c;
+        margin-left: 0;
+        margin-top: 0;
+        top: calc(50% - 7px);
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 3px;
+    }
+
+
+    /* Блок Удаленная работа */
+    .remote_work {
+        margin: 0 20px;
+    }
+        .remote_work > div {
+            position: relative;
+            border: 1px solid #e6e6e6;
+            box-shadow:2px 2px 3px #ccc;
+            padding:10px;
+            margin-bottom:20px;
+        }
+            .remote_work > div:last-child {
+                margin-bottom:0;
+            }
+        .remote_work .title {
+            padding-top: 2rem;
+            margin: 0;
+            color: black;
+        }
+        .remote_work .title:hover {
+            text-decoration:underline;
+        }
+
+        .remote_work .avatar {
+            margin-right: 20px;
+        }
+
+        .remote_work .avatar img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .remote_work .desc {
+            font-size: 1.1rem;
+            line-height: 1.5rem;
+            margin-top:5px;
+        }
+        .remote_work .desc a {
+            color:#666;
+        }
+
+ul.list-inline li.profi-li {
+    color: black;
+    font-weight: bold;
+    padding: 10px 10px 10px 35px;
+    margin: 0 35px 0 0;
+    background: no-repeat scroll left center transparent;
+}
+ul.list-inline li.profi-li a {color:black;}
+    ul.list-inline li.profi-li a:hover {
+        color: #82B93C;
+    }
+ul.list-inline li.pdata {
+    background-image: url('../img/icons/uptop.png');
+}
+ul.list-inline li.messages {
+    background-image: url('../img/icons/messages.png');
+}
+ul.list-inline li.status {
+    background-image: url('../img/icons/safe_deal.png');
+}
+    ul.list-inline li.status:hover {
+        cursor:pointer;
+        background-image: url('../img/icons/safe_deal_colr.png');
+    }
+ul.list-inline li.views {
+}
